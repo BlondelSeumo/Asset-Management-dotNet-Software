@@ -1,0 +1,50 @@
+@model AMS.Models.AssetViewModel.AssetCRUDViewModel
+
+<table class="CustomBlueTable" id="tblCommentHistory" style="width:100%;" border="1">
+    <thead>
+        <tr>
+            <th>Comment</th>
+            <th>Comment By</th>
+            <th>Comment Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listCommentCRUDViewModel)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    @String.Format("{0:f}", item.CreatedDate)
+                </td>
+                <td>
+                    <a href="#" class="btn btn-danger btn-xs" onclick="DeleteComment('@item.Id', true)">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+<input type="hidden" value="@Model.Id" id="tmpAssetId" />
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="CommentMessage" class="control-label"></label>
+    <textarea asp-for="CommentMessage" class="form-control"></textarea>
+    <span asp-validation-for="CommentMessage" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <input type="button" value="Add Comment" class="btn btn-info" onclick="AddNewComment(true)">
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#tblCommentHistory").DataTable({
+        });
+    });
+</script>

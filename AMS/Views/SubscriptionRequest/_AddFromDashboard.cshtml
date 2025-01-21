@@ -1,0 +1,27 @@
+@model AMS.Models.SubscriptionRequestViewModel.SubscriptionRequestCRUDViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <form id="frmSubscriptionRequest">
+                <div class="form-group row">
+                    <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-7">
+                        <input asp-for="Email" class="form-control" type="email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="button" id="btnSave" value="Subscribe" onclick="SaveSubscribe()"
+                            class="btn btn-info">
+                        <button type="button" id="btnClose" class="btn btn-danger" data-dismiss="modal" hidden>Close</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

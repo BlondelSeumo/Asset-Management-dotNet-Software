@@ -1,0 +1,63 @@
+﻿@model AMS.Models.ManageUserRolesVM.ManageUserRolesCRUDViewModel
+@{
+    ViewData["Title"] = "Manage Role";
+}
+
+<input type="text" id="inputRoleSearch" onkeyup="SearchInTable()" placeholder="Search for Page Name.." title="Type in a name">
+<div class="panel panel-info">
+    <form id="frmManageRole">
+        <input type="hidden" id="ApplicationUserId" asp-for="ApplicationUserId" />
+        <div class="card">
+            <div class="card-header">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-10 pull-left">
+                    <input type="checkbox" id="checkAll" /> <b>Check All</b>
+                </div>
+            </div>
+            <br />
+            <div class="card-body">
+                <partial name="_ManageRoleCardBody" />
+            </div>
+            <div class="card-footer">
+                <input type="button" id="btnUpdateRole" value="Update" onclick="SaveUpdateUserRole()" class="btn btn-primary"
+                    style="width:auto" />
+                <button type="button" id="btnClose" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    #inputRoleSearch {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+</style>
+
+<script>
+    $("#checkAll").click(function () {
+        $('input:checkbox').not(this).prop('checked', this.checked);
+    });
+    $('#CurrentURL').val(window.location.pathname);
+
+    var SearchInTable = function () {
+        var _TableName1 = document.getElementById("myTable1");
+        var _TableName2 = document.getElementById("myTable2");
+        var _TableName3 = document.getElementById("myTable3");
+
+        SearchByInHTMLTable(_TableName1);
+        SearchByInHTMLTable(_TableName2);
+        SearchByInHTMLTable(_TableName3);
+    }
+</script>

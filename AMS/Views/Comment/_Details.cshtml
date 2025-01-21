@@ -1,0 +1,18 @@
+@model AMS.Models.CommentViewModel.CommentCRUDViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="CustomBlueTable">
+            <tr><th>Id</th><td>@Model.Id</td></tr>
+            <tr><th>Asset Id</th><td>@Model.AssetId</td></tr>
+            <tr><th>Asset Name</th><td>@Model.AssetName</td></tr>
+            <tr><th>Message</th><td>@Model.Message</td></tr>
+            <tr><th>Is Deleted</th><td>@Model.IsDeleted</td></tr>
+            <tr><th>Created Date</th><td>@Model.CreatedDate</td></tr>
+            <tr><th>Modified Date</th><td>@Model.ModifiedDate</td></tr>
+            <tr><th>Created By</th><td>@Model.CreatedBy</td></tr>
+            <tr><th>Modified By</th><td>@Model.ModifiedBy</td></tr>
+            <tr><th>Cancelled</th><td>@Model.Cancelled</td></tr>
+        </table>
+    </div>
+</div>

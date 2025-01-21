@@ -1,0 +1,32 @@
+@{
+    var _IsInRole = User.IsInRole("Admin");
+    if (_IsInRole)
+    {
+        <partial name="_IndexAdmin" />
+    }
+    else
+    {
+        <partial name="_IndexGeneral" />
+    }
+}
+
+<script src="~/js/Asset/Asset_CRUD.js"></script>
+<style>
+    .panel-heading {
+        padding: 0px 0px 0px 5px;
+    }
+
+    .panel-body {
+        padding: 5px;
+    }
+
+    .h4 {
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        DataTableCustomSearchBox('450px', 'Search Asset');
+    });
+</script>

@@ -1,0 +1,122 @@
+﻿@model AMS.Models.ManageUserRolesVM.ManageUserRolesCRUDViewModel
+@{
+    ViewData["Title"] = "Manage Role";
+}
+
+<div class="row">
+    @{
+        var Dataset = Model.listManageUserRolesDetails;
+        var TotalRow = Dataset.Count;
+        var LastCount = 0;
+        <div class="col-sm-4">
+            <table class="CustomBlueTable" id="myTable1" border="1">
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Role Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index = 1;
+                        @for (int i = 0; i < TotalRow / 3; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @index
+                                </td>
+                                <td>
+                                    <div class="form-check m-1">
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].Id" />
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].RoleId" />
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].RoleName" />
+                                        <input type="checkbox" asp-for="@Model.listManageUserRolesDetails[i].IsAllowed"
+                                    id="@Model.listManageUserRolesDetails[i].RoleId" />
+                                        <span>@Model.listManageUserRolesDetails[i].RoleName</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            index++;
+                            LastCount = i;
+                        }
+                    }
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <table class="CustomBlueTable" id="myTable2" border="1">
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Role Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index2 = index;
+                        @for (int i = index2 - 1; i < TotalRow - index2 / 2; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @index2
+                                </td>
+                                <td>
+                                    <div class="form-check m-1">
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].Id" />
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].RoleId" />
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].RoleName" />
+                                        <input type="checkbox" asp-for="@Model.listManageUserRolesDetails[i].IsAllowed"
+                                    id="@Model.listManageUserRolesDetails[i].RoleId" />
+                                        <span>@Model.listManageUserRolesDetails[i].RoleName</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            index2++;
+                            LastCount = i;
+                        }
+                    }
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <table class="CustomBlueTable" id="myTable3" border="1">
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Role Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int index3 = index2;
+                        @for (int i = index2 - 1; i < TotalRow; i++)
+                        {
+                            <tr>
+                                <td>
+                                    @index3
+                                </td>
+                                <td>
+                                    <div class="form-check m-1">
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].Id" />
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].RoleId" />
+                                        <input type="hidden" asp-for="@Model.listManageUserRolesDetails[i].RoleName" />
+                                        <input type="checkbox" asp-for="@Model.listManageUserRolesDetails[i].IsAllowed"
+                                    id="@Model.listManageUserRolesDetails[i].RoleId" />
+                                        <span>@Model.listManageUserRolesDetails[i].RoleName</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            index3++;
+                        }
+                    }
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+    }
+</div>

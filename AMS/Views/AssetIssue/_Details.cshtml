@@ -1,0 +1,56 @@
+@model AMS.Models.AssetIssueViewModel.AssetIssueCRUDViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="CustomBlueTable">
+            <tr>
+                <th>Id</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Asset</th>
+                <td>@Model.AssetDisplay</td>
+            </tr>
+            <tr>
+                <th>Raised By Employee</th>
+                <td>@Model.RaisedByEmployeeDisplay</td>
+            </tr>
+            <tr>
+                <th>Issue Description</th>
+                <td>@Model.IssueDescription</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>@Model.Status</td>
+            </tr>
+            <tr>
+                <th>Expected Fix Date</th>
+                <td>@Model.ExpectedFixDate</td>
+            </tr>
+            <tr>
+                <th>Resolved Date</th>
+                <td>@Model.ResolvedDate</td>
+            </tr>
+            <tr>
+                <th>Comment</th>
+                <td>@Model.Comment</td>
+            </tr>
+            <tr>
+                <th>Created Date</th>
+                <td>@Model.CreatedDate</td>
+            </tr>
+            <tr>
+                <th>Modified Date</th>
+                <td>@Model.ModifiedDate</td>
+            </tr>
+            <tr>
+                <th>Created By</th>
+                <td>@Model.CreatedBy</td>
+            </tr>
+            <tr>
+                <th>Modified By</th>
+                <td>@Model.ModifiedBy</td>
+            </tr>
+        </table>
+    </div>
+</div>

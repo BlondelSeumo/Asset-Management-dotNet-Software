@@ -1,0 +1,88 @@
+﻿@model AMS.Models.AccountViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-lg-5" id="form-section">
+            <div id="auth-logo">
+                <h1 style="color: white;"><b>Asset M@nagement System</b></h1>
+            </div>
+
+            <div id="auth-form">
+                <form id="frmLogin">
+                    <input type="hidden" asp-for="Latitude" id="Longitude" />
+                    <input type="hidden" asp-for="Latitude" id="Latitude" />
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" asp-for="Email" id="Email" type="email" name="email"
+                                autofocus placeholder="Email">
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" asp-for="Password" id="Password" type="password" name="password"
+                                required placeholder="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <div class="checkbox checkbox-primary pull-left p-t-0">
+                                <input id="checkbox-signup" type="checkbox" name="remember">
+                                <label for="checkbox-signup" class="text-dark"> Remember Me </label>
+                            </div>
+                            <a asp-action="ForgotPassword" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i>
+                                Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-10">
+                        <div class="col-xs-12">
+                            <button type="button" id="btnUserLogin"
+                                class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light"
+                                onclick="LoginAction()">Log In</button>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            <p>Don't have an account? <a asp-action="Register" class="text-primary m-l-5"><b>Sign
+                                        Up</b></a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <br /><br />
+            <div class="text-center">
+                <img src='~/images/AMS.png' alt="AdminLTE Logo"
+                    class="brand-image img-circle elevation-3 imgCustom200pxCircle">
+            </div>
+        </div>
+
+
+        <div class="col-lg-7 visible-lg" id="background-section">
+        </div>
+    </div>
+</div>
+
+<script src="~/js/LoginOperation.js"></script>
+<script src="~/js/UserInfoFromBrowser/UserInfoFromBrowser_CRUD.js"></script>
+@section Scripts{
+@await Html.PartialAsync("_ValidationScriptsPartial")
+<script>
+    $(document).ready(function () {
+        //$("#btnUserLogin").trigger('click');
+    });
+</script>
+}
+
+<style>
+    #background-section {
+        background: url('/images/LoginBG/B4.jpg') center center/cover no-repeat !important;
+    }
+</style>

@@ -1,0 +1,94 @@
+﻿@model AMS.Models.DashboardViewModel.DashboardSummaryViewModel
+
+<br />
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "Asset")">
+            <div class="info-box">
+                <span class="box"><img src="/images/dashboard/asset150x150.png"></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Asset</span>
+                    <h2>@Model.TotalAsset</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "AssetRequest")">
+            <div class="info-box">
+                <span class="box"><img src="/images/dashboard/request150x150.png"></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Asset Request</span>
+                    <h2>@Model.TotalAssetRequest</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "AssetIssue")">
+            <div class="info-box">
+                <span class="box"><img src="/images/dashboard/alert150x150.png"></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Issue</span>
+                    <h2>@Model.TotalIssue</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "UserManagement")">
+            <div class="info-box">
+                <span class="box"><img src="/images/dashboard/Employee150x150.png"></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Employee</span>
+                    <h2>@Model.TotalEmployee</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="#" onclick="AddEdit(0)">
+            <div class="info-box">
+                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user-plus"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-number">
+                        Add New Asset
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "Asset")">
+            <div class="info-box">
+                <span class="info-box-icon bg-black elevation-1"><i class="fas fa-users"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Assigned Asset</span>
+                    <span class="info-box-number">
+                        @Model.TotalAssignedAsset
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <a href="@Url.Action("Index", "Asset")">
+            <div class="info-box">
+                <span class="info-box-icon bg-black elevation-1"><i class="fas fa-check-square"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">UnAssigned Asset</span>
+                    <span class="info-box-number">
+                        @Model.TotalUnAssignedAsset
+                    </span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<script src="~/js/Asset/Asset_CRUD.js"></script>
+<script src="~/js/UserManagement/UserManagement_CRUD.js"></script>

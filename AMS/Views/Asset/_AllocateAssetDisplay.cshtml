@@ -1,0 +1,37 @@
+@model IEnumerable<AMS.Models.AssetAssignedCRUDViewModel>
+
+<div class="row">
+    <table class="CustomBlueTable" id="tbllistAssetAssigned" style="width:100%;" border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Asset Name</th>
+                <th>Employee Name</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AssetName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

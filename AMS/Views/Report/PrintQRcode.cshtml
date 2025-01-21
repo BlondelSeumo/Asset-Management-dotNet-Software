@@ -1,0 +1,78 @@
+@model AMS.Models.AssetViewModel.ScannerCodeViewModel
+
+<div class="row">
+    <div class="col-sm-9">
+        <h5><b>Print Barcode</b></h5>
+    </div>
+    <div class="col-sm-3 text-right hidden-print">
+        <button class="btn btn-dark" onclick="printDiv('printableArea','CustomBlueTable')"><span class="fa fa-print"></span></button>
+    </div>
+</div>
+<hr />
+<div class="row" id="printableArea">
+    <div class="col-lg-6">
+        <table class="CustomBlueTable" style="width:100%;" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Barcode</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.listScannerCodeViewModel)
+                {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.AssetName</td>
+                    <td id="@item.Id"><img class="imgCustom300px" src="@item.Barcode" alt="" /></td>
+                    <td>
+                        <button class="btn btn-success" onclick="printBarcodeDiv('@item.Id')"><span class="fa fa-print"></span></button>
+                        <button class="btn btn-sm btn-secondary" onclick="printBarcodeDivThurmal('@item.Barcode')"><span class="">TML</span></button>
+                    </td>
+                </tr>}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="ticket">
+            <table class="CustomBlueTable" style="width:100%;" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Barcode</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.sublistScannerCodeViewModel)
+                {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.AssetName</td>
+                    <td id="@item.Id"><img class="imgCustom300px" src="@item.Barcode" alt="" /></td>
+                    <td>
+                        <button class="btn btn-success" onclick="printBarcodeDiv('@item.Barcode')"><span class="fa fa-print"></span></button>
+                        <button class="btn btn-sm btn-secondary" onclick="printBarcodeDivThurmal('@item.Barcode')"><span class="">TML</span></button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        </div>       
+    </div>
+
+    <div class="row" id="divSingleBarcodeDIV">
+        <div class="col-sm-3">
+            <span>
+                <img src="" alt="" id="imgSingleBarcode" class="" />
+            </span>
+        </div>
+        <div class="col-sm-9">
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,87 @@
+﻿.imgCustom200pxBox {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.imgCustom200pxCircle {
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 200px;
+}
+.imgCustom50px {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 50px;
+}
+/* #1572A1 2A2550 */
+.DMSRootColor {
+    background: #590696;
+    color: white;
+}
+
+.login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+    .login-container form {
+        padding: 1%;
+    }
+
+.login-form-1 {
+    padding: 5%;
+}
+
+    .login-form-1 h3 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .login-form-1 .ForgetPwd {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+.login-form-2 {
+    padding: 5%;
+    background: #590696;
+    box-shadow: 10px 10px 8px 0 rgb(255 255 255), 0 9px 20px 20px white;
+}
+
+    .login-form-2 h3 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .login-form-2 label {
+        color: #fff;
+    }
+
+    .login-form-2 span {
+        background-color: white;
+    }
+
+    .login-form-2 p {
+        color: white;
+    }
+
+    .login-form-2 a {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .login-form-2 .btnSubmit {
+        font-weight: 600;
+        color: #590696;
+        background-color: #fff;
+        border-radius: 0rem;
+        border: none;
+        cursor: pointer;
+    }

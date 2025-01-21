@@ -1,0 +1,59 @@
+﻿@model AMS.Models.DashboardViewModel.DashboardSummaryViewModel
+
+<hr />
+
+<div class="panel panel-hash">
+    <div class="panel-heading">
+        <h4><b>Recent Asset</b></h4>
+    </div>
+    <div class="panel-body scroll panel-height">
+        <table class="CustomBlueTable" id="tblAsset">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Image</th>
+                    <th>Asset Id</th>
+                    <th>Asset Model No</th>
+                    <th>Name</th>
+                    <th>Assign Employee</th>
+                    <th>Unit Price</th>
+                    <th>Date Of Purchase</th>
+                    <th>Date Of Manufacture</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model.listAssetCRUDViewModel)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>
+                                <div class="info">
+                                    <a href="#" class="d-block" onclick="ViewImage('@item.ImageURL', '@item.Name')">                                       
+                                        <div class="image">
+                                            <img src="@item.ImageURL" class="imgCustom100px elevation-2" alt="Asset Image">
+                                        </div>
+                                    </a>
+                                </div>
+                            </td>
+                            <td>@item.AssetId</td>
+                            <td>@item.AssetModelNo</td>
+                            <td>
+                                <a href='#' class='btn btn-link btn-xs' onclick=Details('@item.Id')>@item.Name</a>
+                            </td>
+                            <td>
+                                <a href='#' class='btn btn-link btn-xs'
+                                onclick=UnassignedAssetWarning('@item.Id')>@item.AssignEmployeeDisplay</a>
+                            </td>
+                            <td>@item.UnitPrice</td>
+                            <td>@item.DateOfPurchase.ToString("dd MMMM yyyy")</td>
+                            <td>@item.DateOfManufacture.ToString("dd MMMM yyyy")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <br /><br /><br />
+    </div>
+</div>

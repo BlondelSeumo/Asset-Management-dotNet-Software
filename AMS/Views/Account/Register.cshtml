@@ -1,0 +1,217 @@
+﻿@model AMS.Models.AccountViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-lg-5" id="form-section">
+            <div id="auth-logo">
+                <h1 style="color: white;"><b>Asset M@nagement System</b></h1>
+            </div>
+
+            <div id="auth-form">
+                <p class="login-box-msg">Register a new membership</p>
+                <form id="frmRegister">
+                    <input type="hidden" asp-for="Longitude" id="Longitude" />
+                    <input type="hidden" asp-for="Latitude" id="Latitude" />
+
+                    <div>
+                        <label asp-for="FirstName"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="FirstName" type="text" class="form-control" placeholder="Firts Name" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="LastName"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="LastName" type="text" class="form-control" placeholder="Last Name" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="PhoneNumber"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="PhoneNumber" type="text" class="form-control" placeholder="Phone Number" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Email"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="Email" type="email" class="form-control" placeholder="Email" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Address"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="Address" type="text" class="form-control" placeholder="Address" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-address-card"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Country"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="Country" type="text" class="form-control" placeholder="Country" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-flag"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Country" class="text-danger"></span>
+                    </div>
+
+
+                    <div>
+                        <label asp-for="Password"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="ConfirmPassword"></label>
+                        <div class="input-group mb-3">
+                            <input asp-for="ConfirmPassword" type="password" class="form-control"
+                                placeholder="Confirm Password" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                                <label for="agreeTerms">
+                                    I agree to the <a href="#">terms</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <input type="button" id="btnRegister" onclick="RegisterNewUser()" value="Register"
+                                class="btn btn-primary btn-block" />
+                        </div>
+                    </div>
+                    <span class="text-danger">@Html.ValidationSummary(false)</span>
+                </form>
+            </div>
+            <div class="text-center">
+                <a asp-action="Login" class="text-primary m-l-5"><b>Sign In</b></a>
+            </div>
+            <br /><br />
+            <div class="text-center">
+                <img src='~/images/AMS.png' alt="AdminLTE Logo"
+                    class="brand-image img-circle elevation-3 imgCustom200pxCircle">
+            </div>
+        </div>
+
+
+        <div class="col-lg-7 visible-lg" id="background-section">
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+@await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<script src="~/js/LoginOperation.js"></script>
+<style>
+    #background-section {
+        background: url('/images/LoginBG/B3.jpg') center center/cover no-repeat !important;
+    }
+</style>
+
+<script>
+    var RegisterNewUser = function () {
+        if (!$("#frmRegister").valid()) {
+            return;
+        }
+
+        var _frmRegister = $("#frmRegister").serialize();
+        $("#btnRegister").prop("disabled", true);
+        $("#btnRegister").val("Registering...");
+
+        $("#btnRegister").LoadingOverlay("show", {
+            background: "rgba(165, 190, 100, 0.5)"
+        });
+        $("#btnRegister").LoadingOverlay("show");
+
+        $.ajax({
+            type: "POST",
+            url: "/Account/Register",
+            data: _frmRegister,
+            success: function (result) {
+                $("#btnRegister").LoadingOverlay("hide", true);
+                $('#btnRegister').removeAttr('disabled');
+                $("#btnRegister").val("Register");
+                if (result.IsSuccess) {
+                    Swal.fire({
+                        title: result.AlertMessage,
+                        icon: "success"
+                    }).then(function () {
+                        location.href = "/Account/Login";
+                    });
+                }
+                else {
+                    var errorMessage = '<p align="left">' + result.AlertMessage + '</p>';
+                    Swal.fire({
+                        title: errorMessage,
+                        icon: "warning",
+                        width: '900px'
+                    }).then(function () {
+                        setTimeout(function () {
+                            $('#Email').focus();
+                        }, 400);
+                    });
+                }
+            },
+            error: function (errormessage) {
+                errormessage = '<p align="left">' + errormessage.responseText + '</p>';
+                Swal.fire({ title: errormessage.responseText, icon: 'warning', width: '900px' });
+                $("#btnRegister").val("Register");
+                $('#btnRegister').removeAttr('disabled');
+            }
+        });
+    }
+</script>

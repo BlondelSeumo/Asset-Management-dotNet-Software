@@ -1,0 +1,331 @@
+@model AMS.Models.AssetViewModel.AssetCRUDViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="CreatedDate" />
+            <input type="hidden" asp-for="CreatedBy" />
+            <input type="hidden" asp-for="CurrentURL" />
+
+            <form id="frmAsset">
+                <div class="card card-primary card-outline card-tabs">
+                    <div class="card-header p-0 pt-1 border-bottom-0">
+                        <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="BasicInfo" data-toggle="pill" href="#divBasicInfo"
+                                    role="tab" aria-controls="BasicInfo" aria-selected="true">Basic Info</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="OtherInfo" data-toggle="pill" href="#divOtherInfo" role="tab"
+                                    aria-controls="OtherInfo" aria-selected="true">Other Info</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="OtherTab" data-toggle="pill" href="#divOtherTab" role="tab"
+                                    aria-controls="OtherTab" aria-selected="true">Asset Assign</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="tab-content" id="tabContent">
+                            <div class="tab-pane fade show active" id="divBasicInfo" role="tabpanel"
+                                aria-labelledby="divBasicInfo">
+                                <div class="row">
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="AssetId" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-5">
+                                                <input asp-for="AssetId" class="form-control" id="AssetId"
+                                                    type="text" />
+                                                <span asp-validation-for="AssetId" class="text-danger"></span>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="button" value="Update Barcode" onclick="UpdateBarcode()"
+                                                    class="btn btn-sm btn-info" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="AssetModelNo" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="AssetModelNo" class="form-control" id="AssetModelNo"
+                                                    type="text" />
+                                                <span asp-validation-for="AssetModelNo" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Name" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Name" class="form-control" id="Name" type="text" />
+                                                <span asp-validation-for="Name" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Description" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Description" class="form-control" id="Description"
+                                                    type="text" />
+                                                <span asp-validation-for="Description" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="UnitPrice" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="UnitPrice" class="form-control" id="UnitPrice"
+                                                    type="number" />
+                                                <span asp-validation-for="UnitPrice" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="AssetStatus" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="AssetStatus" asp-items="@ViewBag._LoadddlAssetStatus"
+                                                    id="AssetStatus" class="form-control" style="width:100%;">
+                                                </select>
+                                                <span asp-validation-for="AssetStatus" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="DateOfPurchase" class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <input asp-for="DateOfPurchase" class="form-control" type="date" />
+                                                <span asp-validation-for="DateOfPurchase" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="Barcode" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <img src="@Model.Barcode" alt="" id="Barcode" />
+                                                <span asp-validation-for="Barcode" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label asp-for="QRCode" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-5">
+                                                <input class="form-control" value="@Model.QRCode" type="text"
+                                                    id="QRCode" />
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="button" value="Update QRCode" onclick="GenerateQRCode()"
+                                                    class="btn btn-sm btn-success" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9" id="divQRCode">                                               
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group row">
+                                            <label asp-for="Category" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="Category" asp-items="@ViewBag._LoadddlAssetCategorie"
+                                                    id="Category" class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="Category" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="SubCategory" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="SubCategory"
+                                                    asp-items="@ViewBag._LoadddlAssetSubCategorie" id="SubCategory"
+                                                    class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="SubCategory" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Supplier" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="Supplier" asp-items="@ViewBag._LoadddlSupplier"
+                                                    id="Supplier" class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="Supplier" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Department" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="Department" asp-items="@ViewBag._LoadddlDepartment"
+                                                    id="Department" class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="Department" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="SubDepartment" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <select asp-for="SubDepartment"
+                                                    asp-items="@ViewBag._LoadddlSubDepartment" id="SubDepartment"
+                                                    class="form-control" style="width:100%;">
+                                                    <option disabled selected>--- SELECT ---</option>
+                                                </select>
+                                                <span asp-validation-for="SubDepartment" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="divOtherInfo" role="tabpanel"
+                                aria-labelledby="divOtherInfoTab">
+                                <div class="row">
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="DateOfManufacture" class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <input asp-for="DateOfManufacture" class="form-control"
+                                                    id="DateOfManufacture" type="date" />
+                                                <span asp-validation-for="DateOfManufacture" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="YearOfValuation" class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <input asp-for="YearOfValuation" class="form-control"
+                                                    id="YearOfValuation" type="date" />
+                                                <span asp-validation-for="YearOfValuation" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="WarranetyInMonth" class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <input asp-for="WarranetyInMonth" class="form-control"
+                                                    id="WarranetyInMonth" type="text" />
+                                                <span asp-validation-for="WarranetyInMonth" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="DepreciationInMonth"
+                                                class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <input asp-for="DepreciationInMonth" class="form-control"
+                                                    id="DepreciationInMonth" type="text" />
+                                                <span asp-validation-for="DepreciationInMonth"
+                                                    class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Location" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <input asp-for="Location" class="form-control" id="Location"
+                                                    type="text" />
+                                                <span asp-validation-for="Location" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="ImageURL" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <span class="control-fileupload">
+                                                    <label for="file">Choose a file :</label>
+                                                    <input type="file" asp-for="ImageURLDetails" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="PurchaseReceipt" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <span class="control-fileupload">
+                                                    <label for="file">Choose a file :</label>
+                                                    <input type="file" asp-for="PurchaseReceiptDetails" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label asp-for="Note" class="col-sm-3 col-form-label"></label>
+                                            <div class="col-sm-9">
+                                                <textarea asp-for="Note" class="form-control" id="Note" type="text"
+                                                    rows="3"></textarea>
+                                                <span asp-validation-for="Note" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="divOtherTab" role="tabpanel" aria-labelledby="divOtherTab">
+                                <div class="row">
+                                    <div class="col-6 col-sm-6">
+                                        <div class="form-group row">
+                                            <label asp-for="AssignEmployeeId" class="col-sm-4 col-form-label"></label>
+                                            <div class="col-sm-8">
+                                                <select asp-for="AssignEmployeeId" asp-items="@ViewBag._LoadddlEmployee"
+                                                    id="AssignEmployeeId" class="form-control" style="width:100%;">
+                                                    <option selected value="0">Unassigned</option>
+                                                </select>
+                                                <span asp-validation-for="AssignEmployeeId" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-sm-6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="button" id="btnSave" value="Save" onclick="SaveAsset()" class="btn btn-info">
+                            <button type="button" id="btnClose" class="btn btn-danger"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('#CurrentURL').val(window.location.pathname);
+    var _AssetId = $("#AssetId").val();
+    $("#Barcode").JsBarcode(_AssetId, {
+        width: 2,
+        height: 80,
+        displayValue: true,
+        fontOptions: "",
+        //font: "monospace",
+        text: undefined,
+        textAlign: "center",
+        textPosition: "bottom",
+        textMargin: 2,
+        fontSize: 15,
+        background: "#ffffff",
+        lineColor: "#000000",
+        margin: 10,
+        marginTop: undefined,
+        marginBottom: undefined,
+        marginLeft: undefined,
+        marginRight: undefined,
+        valid: function valid() { }
+    });
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            GenerateQRCode();
+        }, 500);
+    });
+</script>

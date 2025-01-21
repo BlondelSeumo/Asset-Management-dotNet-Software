@@ -1,0 +1,30 @@
+@model AMS.Models.AssetViewModel.AssetCRUDViewModel
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel-footer text-right">
+            <button class="btn btn-info" onclick="printDiv('printableArea','CustomBlueTable')"><span class="fa fa-print"></span></button>
+            <button class="btn btn-info" onclick="BacktoPreviousPage()">Back</button>
+        </div>
+
+        <div id="printableArea">
+            <style>
+                table th {
+                    padding-left: 5px;
+                }
+
+                table td {
+                    padding-left: 5px;
+                }
+            </style>
+            <partial name="~/Views/Report/_CompanyBanner.cshtml" />
+            <hr />
+            <partial name="_Details.cshtml" />
+            <hr />
+            <partial name="_CommentHistoryInPrint" />
+
+            <hr />
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,36 @@
+@model AMS.Models.AssetViewModel.AssetCRUDViewModel
+<div class="row" style="overflow-x:auto;">
+    <table class="CustomBlueTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Asset</th>
+                <th>Requested Employee</th>
+                <th>Approved By</th>
+                <th>Request Details</th>
+                <th>Status</th>
+                <th>Request Date</th>
+                <th>Receive Date</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model.listAssetRequestCRUDViewModel)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.AssetDisplay</td>
+                        <td>@item.RequestedEmployeeDisplay</td>
+                        <td>@item.ApprovedByEmployeeDisplay</td>
+                        <td>@item.RequestDetails</td>
+                        <td>@item.Status</td>
+                        <td>@item.RequestDate</td>
+                        <td>@item.ReceiveDate</td>
+                        <td>@item.Comment</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

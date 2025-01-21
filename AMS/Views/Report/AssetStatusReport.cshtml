@@ -1,0 +1,104 @@
+﻿@model AMS.Models.ReportViewModel.ManageReportViewModel
+
+@{
+    ViewData["Title"] = "Asset Status Report";
+}
+
+<div class="wrapper">
+
+    <div class="col-sm-12" id="printableArea">
+        <div class="panel panel-hash">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h5><b>Asset Status Report</b></h5>
+                    </div>
+                    <div class="col-sm-3 text-right hidden-print">
+                        <button class="btn btn-info" onclick="printDiv('printableArea','ItemTranTable')"><span class="fa fa-print"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hidden-print">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" id="StartDate" class="form-control" placeholder="Select Start Date" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" id="EndDate" class="form-control" placeholder="Select Start Date" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label><span></span></label>
+                        <input type="submit" value="Submit"
+                               onclick="AssetStatusReportByDate(document.getElementById('StartDate').value,document.getElementById('EndDate').value)"
+                               class="form-control btn btn-danger">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label><span></span></label>
+                        <input type="button" class="form-control btn btn-success" value="Reset" onclick="AssetStatusReport()" />
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Showing Data on Date Range: @ViewBag.StartDate to @ViewBag.EndDate</label>
+                </div>
+            </div>
+
+            <h5>Total Asset: @Model.AssetStatusViewModel.Total</h5>
+            <hr />
+            <div class="panel-body scroll panel-height">
+                <table class="ItemTranTable" style="width:100%;" border="1">
+                    <thead>
+                        <tr>
+                            <th>New</th>
+                            <th>In Use</th>
+                            <th>Available</th>
+                            <th>Damage</th>
+
+                            <th>Return</th>
+                            <th>Expired</th>
+                            <th>Required License Update</th>
+                            <th>Miscellaneous</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.AssetStatusViewModel.New</td>
+                            <td>@Model.AssetStatusViewModel.InUse</td>
+                            <td>@Model.AssetStatusViewModel.Available</td>
+                            <td>@Model.AssetStatusViewModel.Damage</td>
+                            <td>@Model.AssetStatusViewModel.Return</td>
+                            <td>@Model.AssetStatusViewModel.Expired</td>
+                            <td>@Model.AssetStatusViewModel.RequiredLicenseUpdate</td>
+                            <td>@Model.AssetStatusViewModel.Miscellaneous</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .panel-heading {
+        padding: 0px 0px;
+        border-bottom: 0px solid transparent;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+</style>
+
+<script src="~/js/Report.js"></script>
+

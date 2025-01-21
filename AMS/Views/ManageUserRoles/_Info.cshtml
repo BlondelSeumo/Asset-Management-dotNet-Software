@@ -1,0 +1,35 @@
+@model AMS.Models.ManageUserRolesVM.ManageUserRolesCRUDViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="card card-primary card-outline card-tabs">
+    <div class="card-header p-0 pt-1 border-bottom-0">
+        <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="Tab01" data-toggle="pill" href="#divTab01" role="tab"
+                    aria-controls="Tab01" aria-selected="true">Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Tab02" data-toggle="pill" href="#divTab02" role="tab" aria-controls="Tab02"
+                    aria-selected="true">Access Role List</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body">
+        <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active" id="divTab01" role="tabpanel" aria-labelledby="divTab01">
+                <partial name="_Details" />
+            </div>
+            <div class="tab-pane fade show" id="divTab02" role="tabpanel" aria-labelledby="divTab02">
+                <partial name="_ManageRoleCardBody" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('input:checkbox').attr('disabled', 'true');
+</script>

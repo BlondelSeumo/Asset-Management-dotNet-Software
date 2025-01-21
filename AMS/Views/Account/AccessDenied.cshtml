@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Access denied";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-lg-5" id="form-section">
+            <br /><br />
+            <div class="text-center">
+                <h3>You do not have access to this resource.</h3>
+            </div>
+            <hr />
+
+            <div class="text-center">
+                <a asp-action="Login" class="text-primary m-l-5"><b>Sign In</b></a>
+            </div>
+            <br /><br />
+            <div class="text-center">
+                <img src='~/images/AMS.png' alt="AdminLTE Logo"
+                    class="brand-image img-circle elevation-3 imgCustom200pxCircle">
+            </div>
+        </div>
+
+        <div class="col-lg-7 visible-lg" id="background-section">
+        </div>
+    </div>
+</div>
+
+
+<style>
+    #background-section {
+        background: url('/images/LoginBG/B9.jpg') center center/cover no-repeat !important;
+    }
+
+    .format-pre pre {
+        background: #49483e;
+        color: #f7f7f7;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .swal-wide {
+        width: 850px !important;
+    }
+</style>

@@ -1,0 +1,28 @@
+@model AMS.Models.AssetViewModel.AssetCRUDViewModel
+
+<h5>Asset ID: @Model.Id, Name: @Model.Name</h5>
+<table class="CustomBlueTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Assign Employee</th>
+            <th>Action</th>
+            <th>Note</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ foreach (var item in Model.listAssetHistoryCRUDViewModel)
+            {
+<tr>
+    <td>@item.Id</td>
+    <td>@item.AssignEmployeeDisplay</td>
+    <td>@item.Action</td>
+    <td>@item.Note</td>
+    <td>@String.Format("{0:f}", item.CreatedDate)</td>
+</tr>
+ } }
+    </tbody>
+</table>
+
+

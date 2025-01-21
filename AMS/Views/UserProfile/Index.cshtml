@@ -1,0 +1,33 @@
+﻿@model AMS.Models.UserProfileViewModel.UserProfileCRUDViewModel
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="wrapper">
+    <div class="panel panel-hash">
+        <div class="panel-heading">
+            <h4><b>User Profile</b></h4>
+        </div>
+        <div class="panel-body scroll panel-height">
+            <input type="hidden" asp-for="UserProfileId" />
+            <input type="hidden" asp-for="ApplicationUserId" />
+
+            <div class="col-lg-8" id="divUserProfile">
+                <partial name="~/Views/UserManagement/_ViewUserDetails.cshtml" />
+                <br />
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label"></label>
+                    <div class="col-sm-8">
+                        <input type="button" class="btn btn-success" id="EditUserProfile" value="Edit User Profile"
+                            onclick="AddEditUserAccount(document.getElementById('UserProfileId').value)" />
+                        <input type="button" class="btn btn-danger" id="ResetPassword" value="Reset Password"
+                            onclick="ResetPasswordGeneral(document.getElementById('ApplicationUserId').value)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/UserManagement/UserManagement_CRUD.js"></script>

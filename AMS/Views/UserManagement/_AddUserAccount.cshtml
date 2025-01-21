@@ -1,0 +1,220 @@
+﻿@model AMS.Models.UserProfileViewModel.UserProfileCRUDViewModel
+
+<div class="card card-primary card-outline card-tabs">
+    <div class="card-header p-0 pt-1 border-bottom-0">
+        <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="Tab01" data-toggle="pill" href="#divTab01" role="tab"
+                    aria-controls="Tab01" aria-selected="true">Summary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Tab02" data-toggle="pill" href="#divTab02" role="tab" aria-controls="Tab02"
+                    aria-selected="true">Details</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card-body">
+        <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active" id="divTab01" role="tabpanel" aria-labelledby="divTab01">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="ApplicationUserForm">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="UserProfileId" id="UserProfileId" />
+                            <input type="hidden" asp-for="ApplicationUserId" id="ApplicationUserId" />
+                            <input type="hidden" id="CurrentURL" asp-for="CurrentURL" />
+
+                            <div class="row">
+                                <div class="col-6 col-sm-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">First Name</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="FirstName" class="form-control" id="FirstName"
+                                                type="text" />
+                                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Last Name</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="LastName" class="form-control" id="LastName" type="text" />
+                                            <span asp-validation-for="LastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Phone Number</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber"
+                                                type="text" />
+                                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Email</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Email" class="form-control" id="Email" type="email" />
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Password</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="PasswordHash" class="form-control" id="PasswordHash"
+                                                type="password" />
+                                            <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Confirm Password</label>
+                                        <div class="col-sm-8">
+                                            <input asp-for="ConfirmPassword" class="form-control" id="ConfirmPassword"
+                                                type="password" />
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-sm-6">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Address</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Address" class="form-control" id="Address" type="text" />
+                                            <span asp-validation-for="Address" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Country</label>
+                                        <div class="col-sm-9">
+                                            <input asp-for="Country" class="form-control" id="Country" type="text" />
+                                            <span asp-validation-for="Country" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="RoleId" class="col-sm-3 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <select asp-for="RoleId" asp-items="@ViewBag.ddlManageUserRoles" id="RoleId"
+                                                class="form-control" style="width:100%;">
+                                                <option disabled selected>--- SELECT ---</option>
+                                            </select>
+                                            <span asp-validation-for="RoleId" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label" for="file">Choose a file :</label>
+                                        <div class="col-sm-9">
+                                            <span class="control-fileupload">
+                                                <input type="file" asp-for="ProfilePictureDetails" />
+                                            </span>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <input type="button" id="btnSave" value="Save" onclick="SaveUser()"
+                                                class="btn btn-info">
+                                            <button type="button" id="btnAddEditUserAccountClose" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="divTab02" role="tabpanel" aria-labelledby="divTab02">
+                <div class="row">
+                    <div class="col-6 col-sm-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Employee Id</label>
+                            <div class="col-sm-9">
+                                <input asp-for="EmployeeId" class="form-control" id="EmployeeId" type="text" />
+                                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date Of Birth</label>
+                            <div class="col-sm-9">
+                                <input asp-for="DateOfBirth" class="form-control" id="LastName" type="date" />
+                                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Designation</label>
+                            <div class="col-sm-9">
+                                <select asp-for="Designation" asp-items="@ViewBag.ddlDesignation" id="Designation"
+                                    class="form-control" style="width:100%;">
+                                    <option disabled selected>--- SELECT ---</option>
+                                </select>
+                                <span asp-validation-for="Designation" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Department</label>
+                            <div class="col-sm-9">
+                                <select asp-for="Department" asp-items="@ViewBag.ddlDepartment" id="Department"
+                                    class="form-control" style="width:100%;">
+                                    <option disabled selected>--- SELECT ---</option>
+                                </select>
+                                <span asp-validation-for="Department" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Sub Department</label>
+                            <div class="col-sm-8">
+                                <select asp-for="SubDepartment" asp-items="@ViewBag.ddlSubDepartment" id="SubDepartment"
+                                    class="form-control" style="width:100%;">
+                                    <option disabled selected>--- SELECT ---</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Joining Date</label>
+                            <div class="col-sm-9">
+                                <input asp-for="JoiningDate" class="form-control" id="JoiningDate" type="Date" />
+                                <span asp-validation-for="JoiningDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Leaving Date</label>
+                            <div class="col-sm-9">
+                                <input asp-for="LeavingDate" class="form-control" id="LeavingDate" type="Date" />
+                                <span asp-validation-for="LeavingDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Is Approver</label>
+                            <div class="col-sm-9">
+                                <select asp-for="IsApprover" id="IsApprover" class="form-control">
+                                    <option value="1" selected>No</option>
+                                    <option value="2">Yes</option>
+                                </select>
+                                <span asp-validation-for="IsApprover" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    $('#CurrentURL').val(window.location.pathname);
+    $(document).ready(function () {
+        $("#RoleId").select2();
+        $("#Designation").select2();
+        $("#Department").select2();
+        $("#SubDepartment").select2();
+    });
+</script>

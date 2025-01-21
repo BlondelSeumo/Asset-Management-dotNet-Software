@@ -1,0 +1,13 @@
+﻿@using Microsoft.Extensions.Options;
+@inject IOptions<AMS.Models.CommonViewModel.ApplicationInfo> _ApplicationInfo;
+
+
+<footer class="main-footer">
+    <strong>Copyright &copy; 2021-2022 <a href="@_ApplicationInfo.Value.CopyrightURL">@_ApplicationInfo.Value.Copyright</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        @_ApplicationInfo.Value.Version
+    </div>
+</footer>
+
+

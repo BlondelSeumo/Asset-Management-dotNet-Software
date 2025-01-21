@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="wrapper">
+    @{
+        var _IsInRole = User.IsInRole("Admin");
+        if (_IsInRole)
+        {
+            <partial name="_AssetSummary" />
+            <partial name="_RecentRegisteredAsset" />
+
+            <partial name="_PieChart" />
+            <hr />
+            <partial name="_UserSummary" />
+            <partial name="_RecentRegisteredUser" />
+        }
+    }
+</div>
+
+<script src="~/js/Asset/Asset_CRUD.js"></script>
+<script src="~/js/SubscriptionRequest/SubscriptionRequest_CRUD.js"></script>
+<script src="~/js/UserManagement/UserManagement_CRUD.js"></script>
+
+<script>
+    setTimeout(function () {
+        //OpenSubscribe();
+    }, 2000);
+</script>

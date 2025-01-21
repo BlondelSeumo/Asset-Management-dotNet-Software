@@ -1,0 +1,57 @@
+﻿@model AMS.Models.DashboardViewModel.DashboardSummaryViewModel
+
+<hr />
+
+<div class="panel panel-hash">
+    <div class="panel-heading"><h4><b>Recent Registered</b></h4></div>
+    <div class="panel-body scroll panel-height">
+        <table class="CustomBlueTable">
+            <thead>
+                <tr>
+                    <th>Profile ID</th>
+                    <th>Profile Picture</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Created Date</th>
+                    <th>Created By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var countSL = 1;
+                    foreach (var item in Model.listUserProfile)
+                    {
+                        <tr>
+                            <td>@item.UserProfileId</td>
+                            <td>
+                                <div class="user-panel mt-2 pb-2 mb-2 d-flex">
+                                    <div class="image">
+                                        <img src="@item.ProfilePicture" class="img-circle elevation-2" alt="User Image">
+                                    </div>
+                                    <div class="info">
+                                        <a href="#" class="d-block" onclick="ViewImage('@item.ProfilePicture', '@item.FirstName')">
+                                            @item.FirstName @item.LastName
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a href='#' class='btn btn-link btn-xs' onclick=ViewUserDetails('@item.UserProfileId')>@item.FirstName</a>
+                            </td>
+                            <td>@item.LastName</td>
+                            <td>@item.PhoneNumber</td>
+                            <td>@item.Email</td>
+                            <td>@item.CreatedDate.ToString("dd MMMM yyyy")</td>
+                            <td>@item.CreatedBy</td>
+                        </tr>
+                        countSL++;
+                    }
+                }
+            </tbody>
+        </table>
+
+        <br /><br /><br />
+    </div>
+</div>

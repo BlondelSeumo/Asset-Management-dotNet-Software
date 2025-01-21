@@ -1,0 +1,187 @@
+@model AMS.Models.AssetViewModel.AssetCRUDViewModel
+
+<table class="CustomBlueTable" style="width:100%;" border="1">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Asset Id</th>
+        <td>@Model.AssetId</td>
+    </tr>
+    <tr>
+        <th>Barcode</th>
+        <td>
+            <img src="@Model.Barcode" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <th>QRCode</th>
+        <td>
+            <img src="@Model.QRCodeImage" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <th>Asset Model No</th>
+        <td>@Model.AssetModelNo</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Asset Status</th>
+        <td>@Model.AssetStatusDisplay</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>@Model.Description</td>
+    </tr>
+    <tr>
+        <th>Category</th>
+        <td>@Model.CategoryDisplay</td>
+    </tr>
+    <tr>
+        <th>Sub Category</th>
+        <td>@Model.SubCategoryDisplay</td>
+    </tr>
+    <tr>
+        <th>Quantity</th>
+        <td>@Model.Quantity</td>
+    </tr>
+    <tr>
+        <th>Unit Price</th>
+        <td>@Model.UnitPrice</td>
+    </tr>
+    <tr>
+        <th>Supplier</th>
+        <td>@Model.SupplierDisplay</td>
+    </tr>
+    <tr>
+        <th>Location</th>
+        <td>@Model.Location</td>
+    </tr>
+    <tr>
+        <th>Department</th>
+        <td>@Model.DepartmentDisplay</td>
+    </tr>
+    <tr>
+        <th>Sub Department</th>
+        <td>@Model.SubDepartmentDisplay</td>
+    </tr>
+    <tr>
+        <th>Warranety In Month</th>
+        <td>@Model.WarranetyInMonth</td>
+    </tr>
+    <tr>
+        <th>Depreciation In Month</th>
+        <td>@Model.DepreciationInMonth</td>
+    </tr>
+    <tr>
+        <th>Image</th>
+        <td>
+            <div class="user-panel mt-2 pb-2 mb-2 d-flex">
+                <div class="image">
+                    <img src="@Model.ImageURL" class="img-circle elevation-2" alt="Asset Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block" onclick="ViewImage('@Model.ImageURL', '@Model.Name')">
+                        @Model.Name
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th>Purchase Receipt</th>
+        <td>
+            @if (Model.PurchaseReceipt != null)
+            {
+                <span>@Model.PurchaseReceipt</span>
+                <input type="button" id="btnDownloadPurchaseReceipt" class="btn btn-xs btn-danger" value="Download"
+                    onclick="DownloadPurchaseReceipt(@Model.Id);" />
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>Date Of Purchase</th>
+        <td>@Model.DateOfPurchase</td>
+    </tr>
+    <tr>
+        <th>Date Of Manufacture</th>
+        <td>@Model.DateOfManufacture</td>
+    </tr>
+    <tr>
+        <th>Year Of Valuation</th>
+        <td>@Model.YearOfValuation</td>
+    </tr>
+    <tr>
+        <th>Assign User Id</th>
+        <td>@Model.AssignEmployeeId</td>
+    </tr>
+    <tr>
+        <th>Is Avilable</th>
+        <td>@Model.IsAvilable</td>
+    </tr>
+    <tr>
+        <th>Note</th>
+        <td>@Model.Note</td>
+    </tr>
+    <tr>
+        <th>Created Date</th>
+        <td>@Model.CreatedDate</td>
+    </tr>
+    <tr>
+        <th>Modified Date</th>
+        <td>@Model.ModifiedDate</td>
+    </tr>
+    <tr>
+        <th>Created By</th>
+        <td>@Model.CreatedBy</td>
+    </tr>
+    <tr>
+        <th>Modified By</th>
+        <td>@Model.ModifiedBy</td>
+    </tr>
+</table>
+
+<script>
+    var DownloadPurchaseReceipt = function (id) {
+        $("#btnDownloadPurchaseReceipt").val("Download...");
+        $("#btnDownloadPurchaseReceipt").attr("disabled", "disabled");
+
+        $.ajax({
+            type: "GET",
+            url: "/Asset/DownloadPurchaseReceipt?id=" + id,
+            success: function (result) {
+                var _base64ToArrayBuffer = base64ToArrayBuffer(result.DocByte);
+                saveByteArray(result.FileName, _base64ToArrayBuffer, result.ContentType);
+
+                setTimeout(function () {
+                    $("#btnDownloadPurchaseReceipt").val("Download");
+                    $("#btnDownloadPurchaseReceipt").removeAttr('disabled');
+                    toastr.success("File Downloaded successfully.");
+                }, 1500);
+            }
+        });
+    }
+
+    var base64ToArrayBuffer = function (base64) {
+        var binaryString = window.atob(base64);
+        var binaryLen = binaryString.length;
+        var bytes = new Uint8Array(binaryLen);
+        for (var i = 0; i < binaryLen; i++) {
+            var ascii = binaryString.charCodeAt(i);
+            bytes[i] = ascii;
+        }
+        return bytes;
+    }
+    var saveByteArray = function (reportName, byte, _type) {
+        var blob = new Blob([byte], { type: _type });
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        var fileName = reportName;
+        link.download = fileName;
+        link.click();
+    };
+</script>

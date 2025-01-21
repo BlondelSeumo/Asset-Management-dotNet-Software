@@ -1,0 +1,134 @@
+﻿@model AMS.Models.ReportViewModel.ManageReportViewModel
+
+@{
+    ViewData["Title"] = "Asset Allocate Report";
+}
+
+<div class="wrapper">
+
+    <div class="col-sm-12" id="printableArea">
+        <div class="panel panel-hash">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h5><b>Asset Allocation Report</b></h5>
+                    </div>
+                    <div class="col-sm-3 text-right hidden-print">
+                        <button class="btn btn-info" onclick="printDiv('printableArea', 'ItemTranTable')"><span class="fa fa-print"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hidden-print">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" id="StartDate" class="form-control" placeholder="Select Start Date" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" id="EndDate" class="form-control" placeholder="Select Start Date" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label><span></span></label>
+                        <input type="submit" value="Submit"
+                               onclick="AssetAllocationReportByDate(document.getElementById('StartDate').value,document.getElementById('EndDate').value)"
+                               class="form-control btn btn-danger">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label><span></span></label>
+                        <input type="button" class="form-control btn btn-success" value="Reset" onclick="AssetAllocationReport()" />
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label>Showing Data on Date Range: @ViewBag.StartDate to @ViewBag.EndDate</label>
+                </div>
+            </div>
+
+            <hr />
+            <div class="panel-body scroll panel-height">
+                <table class="ItemTranTable" style="width:100%;" border="1">
+                    <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Assigned User</th>
+                            <th>Total Assigned</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @{
+                            int SL = 1;
+                            double sumTotalAsset = 0;
+                            @foreach (var item in Model.AllocationViewModel)
+                            {
+                                sumTotalAsset = sumTotalAsset + item.TotalAssigned;
+                                <tr>
+                                    <td>
+                                        @SL
+                                    </td>
+                                    <td>
+                                        <a href='#' onclick=AssignEmployeeInfo(@item.EmployeeId);>@item.UserName</a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TotalAssigned)
+                                    </td>
+                                </tr>
+                                SL++;
+                            }
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><b>Σ:</b> @sumTotalAsset</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr />
+                @{
+                    var _TotalAssigned = @Model.AllocationViewModel.Where(x => x.UserName != "Unassigned").Sum(x => x.TotalAssigned);
+                    var _TotalUnassigned = sumTotalAsset - _TotalAssigned;
+                }
+
+                <h5>Summary</h5>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <table class="ItemTranTable">
+                            <tr><th style="width:50%;">Total Asset:</th><td>@sumTotalAsset</td></tr>
+                            <tr><th>Total Assigned Asset:</th><td>@_TotalAssigned</td></tr>
+                            <tr><th>Total Unassigned Asset:</th><td>@_TotalUnassigned</td></tr>
+                        </table>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                </div>
+                <br /><br />
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .panel-heading {
+        padding: 0px 0px;
+        border-bottom: 0px solid transparent;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+</style>
+
+<script src="~/js/Report.js"></script>
+<script src="~/js/Asset/Asset_CRUD.js"></script>

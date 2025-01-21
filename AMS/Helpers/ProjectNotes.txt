@@ -1,0 +1,125 @@
+﻿
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+npx kill-port 5001
+
+# Create local certificate:
+dotnet dev-certs https --clean
+dotnet dev-certs https -t
+
+
+
+dotnet build
+dotnet run
+
+Publish App:
+dotnet publish -c Release -p:UseAppHost=false
+
+
+-- Kill Current Connection and Drop MSSQL DB: 
+USE [master]
+GO
+ALTER DATABASE [BusinessERP] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [BusinessERP]
+GO
+
+
+
+Fa fa:
+https://fontawesome.com/icons/list?s=solid&f=sharp
+
+
+After sign into google account, go to:
+https://www.google.com/settings/security/lesssecureapps
+or
+https://myaccount.google.com/lesssecureapps 
+
+https://code-maze.com/aspnetcore-send-email/
+
+
+SwaggerDoc
+https://localhost:5007/swagger/index.html
+
+
+SQL Server command line (sqlcmd)
+sqlcmd -S DEVSTATION\MSSQLSERVER2017 -U sa -P dev123456
+https://www.sqlshack.com/working-sql-server-command-line-sqlcmd/
+
+
+DB Reset Login:
+https://localhost:5001/Account/Login?ReturnUrl=%2F
+
+
+
+Update to Dotnet 6.0:
+https://gist.github.com/davidfowl/0e0372c3c1d895c3ce195ba983b1e03d
+
+Package:
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.8
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.8
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.8
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 6.0.8
+
+dotnet add package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation --version 6.0.8
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 6.0.8
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 6.0.8
+
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.8
+dotnet add package SendGrid --version 9.28.0
+dotnet add package Swashbuckle.AspNetCore --version 6.4.0
+dotnet add package Swashbuckle.AspNetCore.Filters --version 7.0.2
+dotnet add package System.Linq.Dynamic.Core --version 1.2.20
+
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
+dotnet add package UAParser --version 3.1.47
+
+
+
+
+
+
+
+
+
+
+
+
+
+Old Code:*************************
+private async Task<int> AssetAllocationUpdate(AssetCRUDViewModel vm, Asset _Asset)
+        {
+            int _AssetStatusValue = vm.AssetStatus;
+            if (_Asset.AssignEmployeeId != vm.AssignEmployeeId)
+            {
+                if (_Asset.AssignEmployeeId == 0)
+                {
+                    await AddAssetHistory(_Asset.Id, vm.AssignEmployeeId, "Unassigned Asset Assigned to Employee.");
+                    _AssetStatusValue = AssetStatusValue.InUse;
+                }
+                else
+                {
+                    if (vm.AssignEmployeeId == 0)
+                    {
+                        await AddAssetHistory(_Asset.Id, _Asset.AssignEmployeeId, "Asset Unassigned from Employee.");
+                        _AssetStatusValue = AssetStatusValue.Available;
+                    }
+                    else
+                    {
+                        await AddAssetHistory(_Asset.Id, _Asset.AssignEmployeeId, "Asset Unassigned from Employee.");
+                        await AddAssetHistory(_Asset.Id, vm.AssignEmployeeId, "Asset Assigned to Employee.");
+                        _AssetStatusValue = AssetStatusValue.InUse;
+                    }
+                }
+            }
+            else
+            {
+                await AddAssetHistory(_Asset.Id, vm.AssignEmployeeId, "Asset Updated.");
+                _AssetStatusValue = vm.AssetStatus;
+            }
+
+            return _AssetStatusValue;
+        }

@@ -1,0 +1,196 @@
+﻿@model AMS.Models.ManageUserRolesVM.UpdateRoleViewModel
+@{
+    ViewData["Title"] = "Manage Role";
+}
+
+<input type="text" id="myInput" onkeyup="SearchInTable()" placeholder="Search for Page Name.." title="Type in a name">
+<div class="panel panel-info">
+    <form id="frmManageRole">
+        <input type="hidden" id="ApplicationUserId" asp-for="ApplicationUserId" />
+        <input type="hidden" id="CurrentURL" asp-for="CurrentURL" />
+
+        <div class="card">
+            <div class="card-header">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-10 pull-left">
+                    <input type="checkbox" id="checkAll" /> <b>Check All</b>
+                </div>
+            </div>
+            <br />
+            <div class="card-body">
+                <div class="row">
+                    @{
+                        var Dataset = Model.listManageUserRolesViewModel;
+                        var TotalRow = Dataset.Count;
+                        var LastCount = 0;
+                        <div class="col-sm-4">
+                            <table class="CustomBlueTable" id="myTable1" border="1">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Page Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int index = 1;
+                                        @for (int i = 0; i < TotalRow / 3; i++)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @index
+                                                </td>
+                                                <td>
+                                                    <div class="form-check m-1">
+                                                        <input type="hidden"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].RoleId" />
+                                                        <input type="hidden"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].RoleName" />
+                                                        <input asp-for="@Model.listManageUserRolesViewModel[i].IsAllowed"
+                                                    class="form-check-input" />
+                                                        <label class="form-check-label"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].IsAllowed">
+                                                            @Model.listManageUserRolesViewModel[i].RoleName
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            index++;
+                                            LastCount = i;
+                                        }
+                                    }
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="col-sm-4">
+                            <table class="CustomBlueTable" id="myTable2" border="1">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Page Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int index2 = index;
+                                        @for (int i = index2 - 1; i < TotalRow - index2 / 2; i++)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @index2
+                                                </td>
+                                                <td>
+                                                    <div class="form-check m-1">
+                                                        <input type="hidden"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].RoleId" />
+                                                        <input type="hidden"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].RoleName" />
+                                                        <input asp-for="@Model.listManageUserRolesViewModel[i].IsAllowed"
+                                                    class="form-check-input" />
+                                                        <label class="form-check-label"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].IsAllowed">
+                                                            @Model.listManageUserRolesViewModel[i].RoleName
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            index2++;
+                                            LastCount = i;
+                                        }
+                                    }
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="col-sm-4">
+                            <table class="CustomBlueTable" id="myTable3" border="1">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Page Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        int index3 = index2;
+                                        @for (int i = index2 - 1; i < TotalRow; i++)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @index3
+                                                </td>
+                                                <td>
+                                                    <div class="form-check m-1">
+                                                        <input type="hidden"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].RoleId" />
+                                                        <input type="hidden"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].RoleName" />
+                                                        <input asp-for="@Model.listManageUserRolesViewModel[i].IsAllowed"
+                                                    class="form-check-input" />
+                                                        <label class="form-check-label"
+                                                asp-for="@Model.listManageUserRolesViewModel[i].IsAllowed">
+                                                            @Model.listManageUserRolesViewModel[i].RoleName
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            index3++;
+                                        }
+                                    }
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+                            </table>
+
+                            <div class="card-footer">
+                                <input type="button" id="btnUpdateRole" value="Update" onclick="UpdateRole()"
+                                    class="btn btn-primary" style="width:auto" />
+                                <button type="button" id="btnClose" class="btn btn-danger"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    #myInput {
+        /*background-image: url('/css/searchicon.png');*/
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+</style>
+
+<script>
+    $("#checkAll").click(function () {
+        $('input:checkbox').not(this).prop('checked', this.checked);
+    });
+    $('#CurrentURL').val(window.location.pathname);
+
+    var SearchInTable = function () {
+        var _TableName1 = document.getElementById("myTable1");
+        var _TableName2 = document.getElementById("myTable2");
+        var _TableName3 = document.getElementById("myTable3");
+
+        SearchByInHTMLTable(_TableName1);
+        SearchByInHTMLTable(_TableName2);
+        SearchByInHTMLTable(_TableName3);
+    }
+</script>

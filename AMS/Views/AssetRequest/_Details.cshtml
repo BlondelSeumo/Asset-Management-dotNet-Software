@@ -1,0 +1,60 @@
+@model AMS.Models.AssetRequestViewModel.AssetRequestCRUDViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="CustomBlueTable">
+            <tr>
+                <th>Id</th>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Asset</th>
+                <td>@Model.AssetDisplay</td>
+            </tr>
+            <tr>
+                <th>Requested Employee</th>
+                <td>@Model.RequestedEmployeeDisplay</td>
+            </tr>
+            <tr>
+                <th>Approved By Employee</th>
+                <td>@Model.ApprovedByEmployeeDisplay</td>
+            </tr>
+            <tr>
+                <th>Request Details</th>
+                <td>@Model.RequestDetails</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>@Model.Status</td>
+            </tr>
+            <tr>
+                <th>Request Date</th>
+                <td>@Model.RequestDate</td>
+            </tr>
+            <tr>
+                <th>Receive Date</th>
+                <td>@Model.ReceiveDate</td>
+            </tr>
+            <tr>
+                <th>Comment</th>
+                <td>@Model.Comment</td>
+            </tr>
+            <tr>
+                <th>Created Date</th>
+                <td>@Model.CreatedDate</td>
+            </tr>
+            <tr>
+                <th>Modified Date</th>
+                <td>@Model.ModifiedDate</td>
+            </tr>
+            <tr>
+                <th>Created By</th>
+                <td>@Model.CreatedBy</td>
+            </tr>
+            <tr>
+                <th>Modified By</th>
+                <td>@Model.ModifiedBy</td>
+            </tr>
+        </table>
+    </div>
+</div>
