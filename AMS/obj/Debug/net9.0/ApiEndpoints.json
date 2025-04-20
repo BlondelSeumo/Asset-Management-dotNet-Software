@@ -1,0 +1,4598 @@
+[
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "AccessDenied",
+    "RelativePath": "Account/AccessDenied",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "Account/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ExternalLogin",
+    "RelativePath": "Account/ExternalLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "provider",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ExternalLoginCallback",
+    "RelativePath": "Account/ExternalLoginCallback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "remoteError",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ExternalLoginConfirmation",
+    "RelativePath": "Account/ExternalLoginConfirmation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "Account/ForgotPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "Account/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ForgotPasswordConfirmation",
+    "RelativePath": "Account/ForgotPasswordConfirmation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "Lockout",
+    "RelativePath": "Account/Lockout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "Account/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Latitude",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Longitude",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "LoginWith2fa",
+    "RelativePath": "Account/LoginWith2fa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "LoginWith2fa",
+    "RelativePath": "Account/LoginWith2fa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TwoFactorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMachine",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "rememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "LoginWithRecoveryCode",
+    "RelativePath": "Account/LoginWithRecoveryCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "LoginWithRecoveryCode",
+    "RelativePath": "Account/LoginWithRecoveryCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RecoveryCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "Logout",
+    "RelativePath": "Account/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Latitude",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Longitude",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "Account/Register",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Latitude",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Longitude",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "Account/ResetPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "Account/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OldPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "ResetPasswordConfirmation",
+    "RelativePath": "Account/ResetPasswordConfirmation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AccountController",
+    "Method": "SaveUserInfoFromBrowser",
+    "RelativePath": "Account/SaveUserInfoFromBrowser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrowserUniqueID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lat",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Long",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TimeZone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrowserMajor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrowserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrowserVersion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CPUArchitecture",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeviceModel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeviceType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeviceVendor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EngineName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EngineVersion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OSName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OSVersion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UA",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "AddEdit",
+    "RelativePath": "Asset/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "AddEdit",
+    "RelativePath": "Asset/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetModelNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubCategory",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubCategoryDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quantity",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UnitPrice",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Supplier",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SupplierDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Location",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Department",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubDepartment",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubDepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WarranetyInMonth",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepreciationInMonth",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageURL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageURLDetails",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseReceipt",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchaseReceiptDetails",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfPurchase",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfManufacture",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "YearOfValuation",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssignEmployeeId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssignEmployeeDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetStatus",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetStatusDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAvilable",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Barcode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "QRCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "QRCodeImage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CommentMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrentURL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAdmin",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.UserProfileId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.EmployeeId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.DateOfBirth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.Designation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.DesignationDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.Department",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.DepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.SubDepartment",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.SubDepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.JoiningDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.LeavingDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.PasswordHash",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.ProfilePictureDetails",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.ProfilePicture",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.RoleId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.RoleIdDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.IsApprover",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.IsApproverDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.CurrentURL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.listAssetAssignedCRUDViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.AssetAssignedCRUDViewModel, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserProfileCRUDViewModel.Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "listAssetHistoryCRUDViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.AssetHistoryViewModel.AssetHistoryCRUDViewModel, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "listCommentCRUDViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.CommentViewModel.CommentCRUDViewModel, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "listAssetRequestCRUDViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.AssetRequestViewModel.AssetRequestCRUDViewModel, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "listAssetIssueCRUDViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.AssetIssueViewModel.AssetIssueCRUDViewModel, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Logo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.CompanyLogo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Currency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.City",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Fax",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyInfoCRUDViewModel.Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "AllocateAsset",
+    "RelativePath": "Asset/AllocateAsset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "AllocateAssetSave",
+    "RelativePath": "Asset/AllocateAssetSave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmployeeId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "Delete",
+    "RelativePath": "Asset/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "Details",
+    "RelativePath": "Asset/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "DetailsGeneral",
+    "RelativePath": "Asset/DetailsGeneral",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "DownloadPurchaseReceipt",
+    "RelativePath": "Asset/DownloadPurchaseReceipt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "Asset/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "Index",
+    "RelativePath": "Asset/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "PrintAsset",
+    "RelativePath": "Asset/PrintAsset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetController",
+    "Method": "RemoveAllocateAsset",
+    "RelativePath": "Asset/RemoveAllocateAsset",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetCategorieController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetCategorie/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetCategorieController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetCategorie/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetCategorieController",
+    "Method": "Delete",
+    "RelativePath": "AssetCategorie/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetCategorieController",
+    "Method": "Details",
+    "RelativePath": "AssetCategorie/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetCategorieController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AssetCategorie/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetCategorieController",
+    "Method": "Index",
+    "RelativePath": "AssetCategorie/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetHistoryController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetHistory/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetHistoryController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetHistory/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssignEmployeeId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssignEmployeeDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Action",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDateDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetHistoryController",
+    "Method": "Delete",
+    "RelativePath": "AssetHistory/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetHistoryController",
+    "Method": "Details",
+    "RelativePath": "AssetHistory/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetHistoryController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AssetHistory/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetHistoryController",
+    "Method": "Index",
+    "RelativePath": "AssetHistory/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetIssueController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetIssue/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetIssueController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetIssue/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RaisedByEmployeeId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "RaisedByEmployeeDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IssueDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExpectedFixDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ResolvedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAdmin",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetIssueController",
+    "Method": "Delete",
+    "RelativePath": "AssetIssue/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetIssueController",
+    "Method": "Details",
+    "RelativePath": "AssetIssue/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetIssueController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AssetIssue/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetIssueController",
+    "Method": "Index",
+    "RelativePath": "AssetIssue/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetRequestController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetRequest/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetRequestController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetRequest/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestedEmployeeId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestedEmployeeDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedByEmployeeId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApprovedByEmployeeDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestDetails",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReceiveDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAdmin",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetRequestController",
+    "Method": "Delete",
+    "RelativePath": "AssetRequest/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetRequestController",
+    "Method": "Details",
+    "RelativePath": "AssetRequest/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetRequestController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AssetRequest/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetRequestController",
+    "Method": "Index",
+    "RelativePath": "AssetRequest/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetStatusController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetStatus/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetStatusController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetStatus/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetStatusController",
+    "Method": "Delete",
+    "RelativePath": "AssetStatus/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetStatusController",
+    "Method": "Details",
+    "RelativePath": "AssetStatus/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetStatusController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AssetStatus/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetStatusController",
+    "Method": "Index",
+    "RelativePath": "AssetStatus/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetSubCategorieController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetSubCategorie/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetSubCategorieController",
+    "Method": "AddEdit",
+    "RelativePath": "AssetSubCategorie/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetCategorieId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetCategorieDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetSubCategorieController",
+    "Method": "Delete",
+    "RelativePath": "AssetSubCategorie/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetSubCategorieController",
+    "Method": "Details",
+    "RelativePath": "AssetSubCategorie/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetSubCategorieController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AssetSubCategorie/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AssetSubCategorieController",
+    "Method": "Index",
+    "RelativePath": "AssetSubCategorie/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AuditLogsController",
+    "Method": "Details",
+    "RelativePath": "AuditLogs/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AuditLogsController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "AuditLogs/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.AuditLogsController",
+    "Method": "Index",
+    "RelativePath": "AuditLogs/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.CommentController",
+    "Method": "AddNewComment",
+    "RelativePath": "Comment/AddNewComment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssetName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Message",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDeleted",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDeletedDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAdmin",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.CommentController",
+    "Method": "Delete",
+    "RelativePath": "Comment/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.CommentController",
+    "Method": "Details",
+    "RelativePath": "Comment/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.CommentController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "Comment/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.CommentController",
+    "Method": "Index",
+    "RelativePath": "Comment/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvenToryPlus.Controllers.CompanyInfoController",
+    "Method": "Edit",
+    "RelativePath": "CompanyInfo/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvenToryPlus.Controllers.CompanyInfoController",
+    "Method": "Edit",
+    "RelativePath": "CompanyInfo/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Logo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyLogo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Currency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "City",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fax",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Website",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvenToryPlus.Controllers.CompanyInfoController",
+    "Method": "Index",
+    "RelativePath": "CompanyInfo/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DepartmentController",
+    "Method": "AddEdit",
+    "RelativePath": "Department/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DepartmentController",
+    "Method": "AddEdit",
+    "RelativePath": "Department/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DepartmentController",
+    "Method": "Delete",
+    "RelativePath": "Department/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DepartmentController",
+    "Method": "Details",
+    "RelativePath": "Department/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DepartmentController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "Department/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DepartmentController",
+    "Method": "Index",
+    "RelativePath": "Department/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DesignationController",
+    "Method": "AddEdit",
+    "RelativePath": "Designation/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DesignationController",
+    "Method": "AddEdit",
+    "RelativePath": "Designation/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DesignationController",
+    "Method": "Delete",
+    "RelativePath": "Designation/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DesignationController",
+    "Method": "Details",
+    "RelativePath": "Designation/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DesignationController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "Designation/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.DesignationController",
+    "Method": "Index",
+    "RelativePath": "Designation/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "Index",
+    "RelativePath": "EmailSetting/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "SendGridSettingAddEdit",
+    "RelativePath": "EmailSetting/SendGridSettingAddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "SendGridSettingAddEdit",
+    "RelativePath": "EmailSetting/SendGridSettingAddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SendGridUser",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SendGridKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromFullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDefault",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "SendGridSettingDetails",
+    "RelativePath": "EmailSetting/SendGridSettingDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "SMTPEmailSettingAddEdit",
+    "RelativePath": "EmailSetting/SMTPEmailSettingAddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "SMTPEmailSettingAddEdit",
+    "RelativePath": "EmailSetting/SMTPEmailSettingAddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Host",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Port",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsSSL",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromFullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDefault",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.EmailSettingController",
+    "Method": "SMTPEmailSettingDetails",
+    "RelativePath": "EmailSetting/SMTPEmailSettingDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.IdentitySettingController",
+    "Method": "Edit",
+    "RelativePath": "IdentitySetting/Edit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.IdentitySettingController",
+    "Method": "Edit",
+    "RelativePath": "IdentitySetting/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordRequireDigit",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordRequiredLength",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordRequireNonAlphanumeric",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordRequireUppercase",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordRequireLowercase",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordRequiredUniqueChars",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "LockoutDefaultLockoutTimeSpanInMinutes",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "LockoutMaxFailedAccessAttempts",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "LockoutAllowedForNewUsers",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRequireUniqueEmail",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "SignInRequireConfirmedEmail",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CookieHttpOnly",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CookieExpiration",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "CookieExpireTimeSpan",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "LoginPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LogoutPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AccessDeniedPath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SlidingExpiration",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.IdentitySettingController",
+    "Method": "Index",
+    "RelativePath": "IdentitySetting/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.LoginHistoryController",
+    "Method": "Details",
+    "RelativePath": "LoginHistory/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.LoginHistoryController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "LoginHistory/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.LoginHistoryController",
+    "Method": "Index",
+    "RelativePath": "LoginHistory/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "ChangePassword",
+    "RelativePath": "Manage/ChangePassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "ChangePassword",
+    "RelativePath": "Manage/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OldPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "Disable2fa",
+    "RelativePath": "Manage/Disable2fa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "Disable2faWarning",
+    "RelativePath": "Manage/Disable2faWarning",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "EnableAuthenticator",
+    "RelativePath": "Manage/EnableAuthenticator",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "EnableAuthenticator",
+    "RelativePath": "Manage/EnableAuthenticator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SharedKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AuthenticatorUri",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "ExternalLogins",
+    "RelativePath": "Manage/ExternalLogins",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "GenerateRecoveryCodes",
+    "RelativePath": "Manage/GenerateRecoveryCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "GenerateRecoveryCodesWarning",
+    "RelativePath": "Manage/GenerateRecoveryCodesWarning",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "Index",
+    "RelativePath": "Manage/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "Index",
+    "RelativePath": "Manage/Index",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsEmailConfirmed",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "LinkLogin",
+    "RelativePath": "Manage/LinkLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "provider",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "LinkLoginCallback",
+    "RelativePath": "Manage/LinkLoginCallback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "RemoveLogin",
+    "RelativePath": "Manage/RemoveLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LoginProvider",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProviderKey",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "ResetAuthenticator",
+    "RelativePath": "Manage/ResetAuthenticator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "ResetAuthenticatorWarning",
+    "RelativePath": "Manage/ResetAuthenticatorWarning",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "SendVerificationEmail",
+    "RelativePath": "Manage/SendVerificationEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsEmailConfirmed",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "SetPassword",
+    "RelativePath": "Manage/SetPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "SetPassword",
+    "RelativePath": "Manage/SetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "ShowRecoveryCodes",
+    "RelativePath": "Manage/ShowRecoveryCodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ManageController",
+    "Method": "TwoFactorAuthentication",
+    "RelativePath": "Manage/TwoFactorAuthentication",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "AddEdit",
+    "RelativePath": "ManageUserRoles/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "AddEdit",
+    "RelativePath": "ManageUserRoles/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "listManageUserRolesDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.ManageUserRolesDetails, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "Delete",
+    "RelativePath": "ManageUserRoles/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "Details",
+    "RelativePath": "ManageUserRoles/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "ManageUserRoles/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "Index",
+    "RelativePath": "ManageUserRoles/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "SaveUpdateUserRole",
+    "RelativePath": "ManageUserRoles/SaveUpdateUserRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "listManageUserRolesDetails",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.ManageUserRolesDetails, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AMS.Models.CommonViewModel.JsonResultViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ASM.Controllers.ManageUserRolesController",
+    "Method": "UpdateUserRole",
+    "RelativePath": "ManageUserRoles/UpdateUserRole",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ReportController",
+    "Method": "AssetAllocationReport",
+    "RelativePath": "Report/AssetAllocationReport",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ReportController",
+    "Method": "AssetAllocationReportByDate",
+    "RelativePath": "Report/AssetAllocationReportByDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StartDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ReportController",
+    "Method": "AssetStatusReport",
+    "RelativePath": "Report/AssetStatusReport",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ReportController",
+    "Method": "AssetStatusReportByDate",
+    "RelativePath": "Report/AssetStatusReportByDate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StartDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndDate",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ReportController",
+    "Method": "PrintBarcode",
+    "RelativePath": "Report/PrintBarcode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.ReportController",
+    "Method": "PrintQRcode",
+    "RelativePath": "Report/PrintQRcode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubDepartmentController",
+    "Method": "AddEdit",
+    "RelativePath": "SubDepartment/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubDepartmentController",
+    "Method": "AddEdit",
+    "RelativePath": "SubDepartment/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepartmentId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubDepartmentController",
+    "Method": "Delete",
+    "RelativePath": "SubDepartment/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubDepartmentController",
+    "Method": "Details",
+    "RelativePath": "SubDepartment/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubDepartmentController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "SubDepartment/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubDepartmentController",
+    "Method": "Index",
+    "RelativePath": "SubDepartment/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "AddEdit",
+    "RelativePath": "SubscriptionRequest/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "AddEdit",
+    "RelativePath": "SubscriptionRequest/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TimeZone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "Delete",
+    "RelativePath": "SubscriptionRequest/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "Details",
+    "RelativePath": "SubscriptionRequest/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "SubscriptionRequest/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "Index",
+    "RelativePath": "SubscriptionRequest/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "OpenSubscribe",
+    "RelativePath": "SubscriptionRequest/OpenSubscribe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SubscriptionRequestController",
+    "Method": "SaveSubscriptionRequest",
+    "RelativePath": "SubscriptionRequest/SaveSubscriptionRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "_TimeZone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SupplierController",
+    "Method": "AddEdit",
+    "RelativePath": "Supplier/AddEdit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SupplierController",
+    "Method": "AddEdit",
+    "RelativePath": "Supplier/AddEdit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContactPerson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrentURL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SupplierController",
+    "Method": "Delete",
+    "RelativePath": "Supplier/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SupplierController",
+    "Method": "Details",
+    "RelativePath": "Supplier/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SupplierController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "Supplier/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.SupplierController",
+    "Method": "Index",
+    "RelativePath": "Supplier/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.SystemRoleController",
+    "Method": "AddNewRole",
+    "RelativePath": "SystemRole/AddNewRole",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.SystemRoleController",
+    "Method": "DeleteRole",
+    "RelativePath": "SystemRole/DeleteRole",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RoleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.SystemRoleController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "SystemRole/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.SystemRoleController",
+    "Method": "Index",
+    "RelativePath": "SystemRole/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.SystemRoleController",
+    "Method": "SaveAddNewRole",
+    "RelativePath": "SystemRole/SaveAddNewRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.UserInfoFromBrowserController",
+    "Method": "Details",
+    "RelativePath": "UserInfoFromBrowser/Details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.UserInfoFromBrowserController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "UserInfoFromBrowser/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.UserInfoFromBrowserController",
+    "Method": "Index",
+    "RelativePath": "UserInfoFromBrowser/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "AddEditUserAccount",
+    "RelativePath": "UserManagement/AddEditUserAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "AddEditUserAccount",
+    "RelativePath": "UserManagement/AddEditUserAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserProfileId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmployeeId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Designation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DesignationDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Department",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubDepartment",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubDepartmentDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JoiningDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeavingDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordHash",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfilePictureDetails",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProfilePicture",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoleId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "RoleIdDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsApprover",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsApproverDisplay",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurrentURL",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "listAssetAssignedCRUDViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[AMS.Models.AssetAssignedCRUDViewModel, AMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModifiedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cancelled",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "DeleteUserAccount",
+    "RelativePath": "UserManagement/DeleteUserAccount",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "GetDataTabelData",
+    "RelativePath": "UserManagement/GetDataTabelData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "Index",
+    "RelativePath": "UserManagement/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "ResetPasswordAdmin",
+    "RelativePath": "UserManagement/ResetPasswordAdmin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "ResetPasswordAdmin",
+    "RelativePath": "UserManagement/ResetPasswordAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OldPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveMGS.Controllers.UserManagementController",
+    "Method": "ViewUserDetails",
+    "RelativePath": "UserManagement/ViewUserDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.UserProfileController",
+    "Method": "Index",
+    "RelativePath": "UserProfile/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.UserProfileController",
+    "Method": "ResetPassword",
+    "RelativePath": "UserProfile/ResetPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AMS.Controllers.UserProfileController",
+    "Method": "SaveResetPassword",
+    "RelativePath": "UserProfile/SaveResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ApplicationUserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OldPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -59,16 +59,16 @@ Update to Dotnet 6.0:
 https://gist.github.com/davidfowl/0e0372c3c1d895c3ce195ba983b1e03d
 
 Package:
-dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.8
-dotnet add package Microsoft.EntityFrameworkCore --version 6.0.8
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.8
-dotnet add package Microsoft.EntityFrameworkCore.Tools --version 6.0.8
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.4
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.4
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.4
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.4
 
-dotnet add package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation --version 6.0.8
-dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 6.0.8
-dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 6.0.8
+dotnet add package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation --version 9.0.4
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 9.0.4
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 9.0.4
 
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.8
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 9.0.4
 dotnet add package SendGrid --version 9.28.0
 dotnet add package Swashbuckle.AspNetCore --version 6.4.0
 dotnet add package Swashbuckle.AspNetCore.Filters --version 7.0.2

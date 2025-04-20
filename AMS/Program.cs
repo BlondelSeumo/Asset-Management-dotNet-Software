@@ -17,22 +17,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
-
-builder.Services.AddScoped<ApplicationDbContext>();
-var _ApplicationInfo = builder.Configuration.GetSection("ApplicationInfo").Get<ApplicationInfo>();
-string _GetConnStringName = ControllerExtensions.GetConnectionString(builder.Configuration);
-if (_ApplicationInfo.DBConnectionStringName == ConnectionStrings.connMySQL)
-{
-    builder.Services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySql(_GetConnStringName, ServerVersion.AutoDetect(_GetConnStringName)));
-}
-else if(_ApplicationInfo.DBConnectionStringName == ConnectionStrings.connPostgreSQL)
-{
-    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(_GetConnStringName));
-}
-else
-{
-    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(_GetConnStringName));
-}
+// Configure MSSQL Server as the default database provider
+string connectionString = builder.Configuration.GetConnectionString("connMSSQL");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
@@ -42,8 +30,7 @@ builder.Services.AddSession(options =>
 
 builder.Services.AddAuthentication(IISDefaults.AuthenticationScheme);
 
-
-//Set Identity Options
+// Set Identity Options
 var _IServiceScopeFactory = builder.Services.BuildServiceProvider().GetRequiredService<IServiceScopeFactory>();
 var _CreateScope = _IServiceScopeFactory.CreateScope();
 var _ServiceProvider = _CreateScope.ServiceProvider;
@@ -62,8 +49,6 @@ else
     AddIdentityOptions.SetOptions(builder.Services, _DefaultIdentityOptions);
 }
 
-
-
 // Get Super Admin Default options
 builder.Services.Configure<SuperAdminDefaultOptions>(builder.Configuration.GetSection("SuperAdminDefaultOptions"));
 builder.Services.Configure<ApplicationInfo>(builder.Configuration.GetSection("ApplicationInfo"));
@@ -72,7 +57,6 @@ builder.Services.AddTransient<ICommon, Common>();
 builder.Services.AddTransient<IAccount, Account>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddTransient<IRoles, Roles>();
-builder.Services.AddTransient<IFunctional, Functional>();
 builder.Services.AddTransient<IFunctional, Functional>();
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
@@ -92,8 +76,6 @@ builder.Services.AddSwaggerGen(c =>
         BearerFormat = "JWT",
         Description = "JWT Authorization header using the Bearer scheme."
     });
-
-    //c.OperationFilter<AuthResponsesOperationFilter>();
 });
 
 builder.Services.AddCors(options =>
@@ -101,12 +83,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 });
 
-
-
-
-
-
 var app = builder.Build();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -119,6 +97,7 @@ else
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseSession();
@@ -132,7 +111,6 @@ app.UseCors("Open");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Dashboard}/{action=Index}/{id?}");
-
 
 using (var scope = app.Services.CreateScope())
 {
